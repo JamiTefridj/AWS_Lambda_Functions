@@ -28,7 +28,7 @@ def handler(event, context):
     """
     cursor = conn.cursor()
 
-    sql_insert_location = """insert into cardEmail set email=%(email)s, source=%(source)s"""
+    sql_insert_location = """insert into cardEmail set email=%(email)s, email_source=%(source)s"""
 
     cursor.execute(sql_insert_location, email_source_dict)
 

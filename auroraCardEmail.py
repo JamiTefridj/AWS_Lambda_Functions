@@ -1,22 +1,22 @@
-# import smtplib, ssl
+import smtplib, ssl
 
-# sender_email = "auroracardemailtest@gmail.com"
-# receiver_email = "spencermaxwell96@gmail.com" # will need to be parameter for incoming email
-# message = """\
-#     Subject: Hi Test
+sender_email = "auroracardemailtest@gmail.com"
+receiver_email = "spencermaxwell96@gmail.com" # will need to be parameter for incoming email
+message = """\
+    Subject: Hi Test
 
 
-#     This is my first test."""
+    This is my first test."""
 
-# port = 465  #Required for SSL
-# password = input("Type your password and press enter: ")
+port = 465  #Required for SSL
+password = input("Type your password and press enter: ")
 
-# # Create a secure SSL context
-# context = ssl.create_default_context()
+# Create a secure SSL context
+context = ssl.create_default_context()
 
-# with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
-#     server.login(sender_email, password)
-#     server.sendmail(sender_email, receiver_email, message)
+with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
+    server.login(sender_email, password)
+    server.sendmail(sender_email, receiver_email, message)
 
 import yagmail
 
